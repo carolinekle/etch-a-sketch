@@ -1,0 +1,25 @@
+.box {
+    display: flex;
+
+    background: red;
+    border-radius: 1rem;
+    height: 500px;
+    width:500px;
+}
+
+.inner{
+    display: flex;
+    justify-content:center ;
+    align-items:center;
+    background: blanchedalmond;
+    border-radius: .5rem;
+    height: 300px;
+    width: 300px;
+}
+
+.controls{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: blue;
+}
