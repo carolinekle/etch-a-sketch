@@ -67,4 +67,17 @@ justify-content: flex-end;
     width: 690px;
     margin: 20px;
     border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
+
+.pixel{
+ width:5px;
+ height:5px;
+ background-color: black;
+
+}
+/* for pixel width and height, these paramiters need to be dynimic, so
+flex basis or flex grow needs to be added in styles */
