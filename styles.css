@@ -88,7 +88,7 @@ body{
 } */
 
 .shake{
-    width: 50px;
+    width: 60px;
     display:flex;
     align-self: flex-end;
 }
@@ -137,7 +137,18 @@ p{
     grid-template-columns: repeat(var(--grid-cols), 1fr);
   }
   
-
+.new-size{
+    height:1rem;
+    width: 3rem;
+}
+.sizer{
+display: flex;
+align-items:end;
+}
+label{
+    color: white;
+    margin-right: 3px;
+}
 
 /* for pixel width and height, these paramiters need to be dynimic, so
 flex basis or flex grow needs to be added in styles 

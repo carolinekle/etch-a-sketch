@@ -1,8 +1,9 @@
 const grid = document.querySelector("#grid");
 const inner = document.querySelectorAll("#inner");
-const shake = document.querySelector("shake");
-const right = document.querySelector("right-controller");
-const left = document.querySelector("left-controller");
+const shake = document.querySelector(".shake");
+const right = document.querySelector(".right-controller");
+const left = document.querySelector(".left-controller");
+/* const change = document.querySelector(".change"); */
 
 
 
@@ -18,16 +19,25 @@ function makeRows(size) {
     };
   };
   
-  makeRows(16);
+makeRows(16)
 
-function changeSize(input){
-  input.addEventListener('keydown', (e) => {
-      if (13 === e.keyCode) {
-        makeRows(input);
+
+ change.addEventListener('click', () => {
+      
+        let newSize = document.querySelector(".new-size").innerHTML;
+        if(newSize>80){
+          window.alert("Try a smaller number!");//not working
+        }
+      
+        else{
+        makeRows(newSize);
+        let currentSize = document.querySelector("current-size");
+        currentSize.appendChild(newSize);
+        }
+//else if for when the input is deleted
       } 
     
-    })
-  };
+    ); 
 console.log(changeSize(input));
 
 function changeColor(right, left){

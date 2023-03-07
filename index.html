@@ -22,8 +22,15 @@
                 <div class="left-controller"> 
                     
                 </div>
-                <label for="size">Set board size:</label>
-                <input class="size" minlength="4" maxlength="100" onchange="getSize(this.value)">
+                <p class="current-size"></p>
+                
+                <div class="sizer">                
+                    <label for="size">Set board size:</label>
+                    <input type ="value" class="new-size" min="4" 
+                    max="100" oninput="makeRows(this.value)">
+                </div>
+
+                <!-- <button class = "change">Change size!</button> -->
                 <button class="shake">Shake to Erase</button>
                 <div class="right-controller">
                     
