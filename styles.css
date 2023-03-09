@@ -57,13 +57,15 @@ body{
     }
     
 .left-controller, .right-controller{
-    background-color: white;
-    height: 30px;
-    width: 30px;
+    background-color: black;
+    height: 65px;
+    width: 65px;
     border-radius: 50%;
     padding: 10px;
     margin-bottom: 10px;
     margin-top:10px;
+    text-align:center;
+    color:white;
     }
 
     #grid,#inner{
@@ -148,6 +150,34 @@ align-items:end;
 label{
     color: white;
     margin-right: 3px;
+}
+
+.right-controller{
+    display: flex;
+    cursor:pointer;
+}
+
+.right-controller > p {
+    display:flex;
+    align-self:center;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    margin-left: 11px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align:center;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: -2px 2px #ef3550,
+                 -4px 4px #7e57c2,
+                 -5px 5px #2196f3,
+                 -7px 7px #26c6da,
+                 -10px 10px #43a047,
+                 -12px 12px #eeff41,
+                 -15px 15px #f9a825,
+                 -17px 17px #ff5722;
 }
 
 /* for pixel width and height, these paramiters need to be dynimic, so

@@ -3,7 +3,7 @@ const inner = document.querySelectorAll("#inner");
 const shake = document.querySelector(".shake");
 const right = document.querySelector(".right-controller");
 const left = document.querySelector(".left-controller");
-/* const change = document.querySelector(".change"); */
+ const change = document.querySelector(".change"); 
 
 
 
@@ -21,6 +21,15 @@ function makeRows(size) {
   
 makeRows(16)
 
+function changeColor(){
+  var num = Math.round(0xffffff * Math.random());
+  var r = num >> 16;
+  var g = num >> 8 & 255;
+  var b = num & 255;
+  return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+};
+
+console.log(changeColor);
 
  change.addEventListener('click', () => {
       
@@ -40,15 +49,20 @@ makeRows(16)
     ); 
 console.log(changeSize(input));
 
-function changeColor(right, left){
-  if(right){
-    cell.style.backgroundColor = {};
+/* right.addEventListener('click', () => {
+    cell.style.backgroundColor = {
+      Random(){
+        var num = Math.round(0xffffff * Math.random());
+        var r = num >> 16;
+        var g = num >> 8 & 255;
+        var b = num & 255;
+        return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+      }
+    };
     //rba number must be between 3-252
   }
-  if(left){
 
-  }
-}
+}); */
 
 right.forEach(right =>{
   right.addEventListener('click', function(){
@@ -61,3 +75,4 @@ left.forEach(left =>{
       changeColor();
   })
 })
+
