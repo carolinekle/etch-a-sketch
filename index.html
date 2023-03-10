@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <header style = "background-color: black; color:white">black</header>
+
     <div id="container" class="outer-sh">   
         <p>Pocket Etch-a-Sketch</p>
         <div id="inner">
@@ -19,9 +21,9 @@
 
         </div>
         <div id="controls-container">
-                <div class="left-controller"> 
-                    
-                </div>
+                <button onclick= "revertColor()"class="left-controller"> 
+                    Revert to black
+                </button>
                 <p class="current-size"></p>
                 
                 <div class="sizer">                
@@ -32,7 +34,7 @@
 
                 <!-- <button class = "change">Change size!</button> -->
                 <button class="shake">Shake to Erase</button>
-                <button class="right-controller">
+                <button onclick="changeColor()" class="right-controller">
                     <p>Color!</p>
                 </button>
     
@@ -40,12 +42,7 @@
 
         </div>
 
-        <div class="wheel">
-            <div class="colors">
-
-            </div>
-        </div>
-
+<footer style = "background-color: black; color: white;">Thanks for checking this out!</footer>
 </body>
 
 </html>
