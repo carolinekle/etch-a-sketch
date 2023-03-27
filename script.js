@@ -4,8 +4,7 @@ const shake = document.querySelector(".shake");
 const right = document.querySelector(".right-controller");
 const left = document.querySelector(".left-controller");
 const change = document.querySelector(".change"); 
-
-let color = "black";
+const newSize = document.querySelector(".new-size").value;
 
 
 
@@ -14,7 +13,7 @@ function makeRows(size) {
     container.style.setProperty('--grid-cols', size);
     for (c = 0; c < (size * size); c++) {
       let cell = document.createElement("div");
-      cell.addEventListener('mouseover',() => {cell.style.backgroundColor = color;})
+      cell.addEventListener('mouseover',() => {cell.style.backgroundColor = 'black';})
       //('draggable', 'false')
       grid.appendChild(cell).className = "pixel";
   
@@ -24,24 +23,14 @@ function makeRows(size) {
 makeRows(16)
 
 
-console.log(changeColor);
-
-
-right.addEventListener('onclick', () => {
-    cell.style.backgroundColor = {
-      Random(){
-        var num = Math.round(0xffffff * Math.random());
-        var r = num >> 16;
-        var g = num >> 8 & 255;
-        var b = num & 255;
-        return 'rgb(' + r + ', ' + g + ', ' + b + ')';
-      }
-    };
-    //rba number must be between 3-252
-  }
-); 
-
-
+right.addEventListener('click', function(){
+    let pixels = document.querySelectorAll(".pixel");
+    pixels.forEach((cell) => {
+      cell.addEventListener('mouseover', () => {
+        cell.style.backgroundColor = changeColor();
+      });
+    })
+  });
 
 function changeColor(){
   var num = Math.round(0xffffff * Math.random());
@@ -57,8 +46,14 @@ shake.addEventListener('click',() => {{
 }});
 
 function revertColor(){
-  return color = "black";
-}
+  let pixels = document.querySelectorAll(".pixel");
+    pixels.forEach((cell) => {
+      cell.addEventListener('mouseover', () => {
+        cell.style.backgroundColor = 'black';
+      });
+    })
+};
+
 
  /* change.addEventListener('click', () => {
       
