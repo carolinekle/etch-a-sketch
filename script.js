@@ -54,21 +54,3 @@ function revertColor(){
     })
 };
 
-
- /* change.addEventListener('click', () => {
-      
-        let newSize = document.querySelector(".new-size").innerHTML;
-        if(newSize<8 || newSize>80){
-        makeRows(newSize);
-        let currentSize = document.querySelector("current-size");
-        currentSize.appendChild(newSize);
-        }
-      
-        else{
-          makeRows(16)
-          console.log("Try a smaller number!");//not working
-        }
-//else if for when the input is deleted
-      } 
-    
-    );  */
